@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: auto;
+        }
+
+        .maindiv {
+            background-color: blue;
+            height: 50px;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maindiv">
+        <center>
+            <input id="src1" type="search"><input id="src2" type="search"><input id="src3" type="search">
+            <button onclick="myFunction()">Search</button>
+        </center>
+    </div>
+    <div id="demo"></div>
+</body>
+
+<script>
+    function myFunction() {
+        const src1 = document.getElementById('src1').value;
+        const src2 = document.getElementById('src2').value;
+        const src3 = document.getElementById('src3').value;
+        if (src1 == src2 && src2 == src3) {
+            document.getElementById('demo').innerHTML = src1;
+        } else {
+            document.getElementById('src1').style.display = "none";
+            document.getElementById('src2').style.display = "none";
+            document.getElementById('demo').innerHTML = 'Plase Enter Same value';
+        }
+    }
+</script>
+
+</html>
